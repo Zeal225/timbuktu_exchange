@@ -1027,7 +1027,7 @@ input:checked~.slide-box-2 {
 
 .title-agency {
     font-size: 2rem;
-    color: rgba(238, 51, 37, 1);
+    color: #F39D24;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
 }
@@ -1044,7 +1044,7 @@ input:checked~.slide-box-2 {
     display: flex;
     align-items: flex-start;
     font-size: 2.7rem;
-    color: rgba(238, 51, 37, 1);
+    color: #F39D24  ;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     z-index: 5;
@@ -1333,7 +1333,7 @@ input:checked~.slide-box-2 {
 }
 
 .title-social {
-    color: #0183ca;
+    color: #c5d975;
     font-size: 2rem;
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
@@ -1683,4 +1683,9 @@ input:checked~.slide-box-2 {
         font-size: 0.8rem;
         text-align: center;
     }
+}
+
+.p-socialimpact a,
+.title-socialimpact a{
+    color: rgba(0, 0, 0, 0.6) !important;
 }

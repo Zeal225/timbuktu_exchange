@@ -19,33 +19,33 @@
 <header id="header">
     <section id="container-logo">
         <div class="block-logo">
-            <a href="">
+            <a href="/">
                 <img class="img-logo-1" src="{{ asset("img/pimg/logo.png") }}" />
             </a>
         </div>
         <nav class="menu">
             <p id="menu-mobile" class="menu-mobile">menu</p>
-            <img src="assets/img/baseline-close-24px.svg" alt="" id="fechar-menu" class="fechar-menu" />
+            <img src="{{ asset("img/baseline-close-24px.svg") }}" alt="" id="fechar-menu" class="fechar-menu" />
             <ul class="menu-list">
-                <a href="about-fr.html" class="menu-item" id="menu-item">
+                <a href="/about" class="menu-item" id="menu-item">
                     <li class="menu-item">Qui Sommes-Nous ?</li>
                 </a>
-                <a href="products-fr.html" class="menu-item" id="menu-item1">
-                    <li class="menu-item">Nos Produits</li>
+                <a href="#container-products" class="menu-item" id="menu-item1">
+                    <li class="menu-item">Nos Offres</li>
                 </a>
                 <a href="#Contacts" class="menu-item" id="menu-item2">
                     <li class="menu-item">Contacts</li>
                 </a>
-                <ul class="menu-lang-mobile">
+                {{--<ul class="menu-lang-mobile">
                     <a class="item-lang" href="">
                         <li class="ingles-en">EN</li>
                     </a>
                     <a class="item-lang" href="">
                         <li class="ingles-fr"> /FR</li>
                     </a>
-                </ul>
+                </ul>--}}
             </ul>
-            <ul class="box-lang">
+            {{--<ul class="box-lang">
                 <a class="item-lang" href="">
                     <li class="ingles-en">EN</li>
                 </a>
@@ -53,7 +53,7 @@
                     <li class="ingles-fr"> /FR</li>
                 </a>
                 </a>
-            </ul>
+            </ul>--}}
         </nav>
         <nav class="boxmenu-mobile">
             <a href="#" class="box-menu">MENU</a>
@@ -113,41 +113,41 @@
                     Nos offres
                 </h2>
             </div>
-            <div class="container-box-cash ">
+            <div class="container-box-cash">
                 <div class="box-cash ">
                     <h2 class="title-cash " data-translatable>Cash à Cash</h2>
                     <img class="img-cash " src="{{ asset("img/cash.png") }}" alt=" ">
-                    <p class="p-cash ">Retrait d’argent dans l’un des points Timbuctu Exchange</p>
+                    <p class="p-cash ">
+                        Retrait d’argent dans l’un des points Timbuctu Exchange
+                    </p>
                 </div>
-               <div class="box-cash border ">
-                    <h2 class="title-cash ">Cash to Card</h2>
-                    <img class="img-cash " src="{{ asset("img/account.png") }}" alt=" ">
-                    <p class="p-cash ">Transfer of money from an individual onto a card</p>
+               <div class="box-cash border">
+                    <h2 class="title-cash ">Cash à Compte </h2>
+                    <img class="img-cash " src="{{ asset("img/account.png") }}" alt="">
+                    <p class="p-cash ">
+                        Conçu pour les migrants, Il permet de transférer de l'argent directement sur un compte bancaire d'origine, à partir du réseau Timbuctu Echange
+                    </p>
                 </div>
                 <div class="box-cash ">
-                    <h2 class="title-cash ">Cash à Compte</h2>
+                    <h2 class="title-cash">Cash à Wallet</h2>
                     <img class="img-cash " src="{{ asset("img/account.png") }}" alt=" ">
                     <p class="p-cash ">
-                        Conçu pour les migrants, Il permet de transférer de l'argent directement sur un compte bancaire d'origine, à partir du réseau Timbuctu Echange </p>
+                        Dépôt d’argent sur compte mobile money
+                    </p>
                 </div>
 
                 <div class="box-cash border ">
-                    <h2 class="title-cash ">Cash à Wallet</h2>
-                        <img class="img-cash" src="{{ asset("img/account.png") }}" alt=" ">
-                        <p class="p-cash ">Dépôt d’argent sur compte mobile money</p>
-                </div>
-                <div class="box-cash ">
                     <h2 class="title-cash ">Cash Delivery</h2>
-                    <img class="img-cash" src="{{ asset("img/account.png") }}" alt=" ">
-                    <p class="p-cash ">
-                        Paiement de transfert à domicile
-                    </p>
+                        <img class="img-cash" src="{{ asset("img/account.png") }}" alt=" ">
+                        <p class="p-cash ">
+                            Paiement de transfert à domicile
+                        </p>
                 </div>
             </div>
         </div>
     </section>
     <section id="simulater">
-        <div class="wrapper-simulater ">
+        <div class="wrapper-simulater">
             <form action=" " class="container-simulater ">
                 <div class="container-select ">
                     <fieldset class="box-simulater ">
@@ -176,7 +176,6 @@
                                 <option value="RUB ">Russian Rouble</option>
                                 <option value="MXN ">Mexican Peso</option>
                                 <option value="ZAR ">South African Rand</option>
-                                <option disabled="disabled ">-----------------------------</option>
                                 <option value="ALL ">Albanian Lek</option>
                                 <option value="DZD ">Algerian Dinar</option>
                                 <option value="ARS ">Argentine Peso</option>
@@ -320,8 +319,7 @@
                                 class="select-simulater "
                                 id="fxexchangerateTo "
                                 name="to "
-                                onchange="getCurrencys(event) "
-                            >
+                                onchange="getCurrencys(event) ">
                                 <option value="XOF " selected="selected ">Ivory Coast</option>
                                 <option value="XOF ">Burkina Faso</option>
                                 <option value="XOF ">Mali</option>
@@ -335,11 +333,11 @@
                     <fieldset class="simulater-converter ">
                         <label class="converter-title ">Votre envoi</label>
                         <span class="converter-items ">
-								<p class="items-text " id="fxspanfm ">EUR</p>
+								<p class="items-text " id="fxspanfm ">USD</p>
 								<input class="converter-items-input "
                                        placeholder="1 "
                                        type="text "
-                                       id="fxexchangerateAmount "
+                                       id="fxexchangerateAmount"
                                        name="amount "
                                        onkeyup="getCurrencys(event) "/>
 							</span>
@@ -352,15 +350,15 @@
 							</span>
                     </fieldset>
                     <span class="container-simulater--description ">
-							<p class="simulater-description description-rate ">Taux du jour: €1 = 655.96 FCFA</p>
-							<p class="simulater-description "> €2.00 fee</p>
+							<p class="simulater-description description-rate ">Taux du jour: $1 = 655.96 FCFA</p>
+							<p class="simulater-description "> $2.00 fee</p>
 						</span>
                 </div>
             </form>
             <div class="firstbox-simulater ">
                 <div class="box-titulo ">
                     <h2 class="title-simulater ">Simulez votre transfert</h2>
-                    <h3 class="subtitle-simulater ">QuickCash est actuellement disponible dans ces pays:</h3>
+                    <h3 class="subtitle-simulater ">Timbuctu Exchange est actuellement disponible dans ces pays:</h3>
                 </div>
                 <ul class="box-country ">
                     <li class="country-name "><img src="{{ asset("img/Flag_Ivory_Coast.svg") }}" class="country-flag " alt="country-flag ">Côte d'ivoire</li>
@@ -380,10 +378,10 @@
                     </figure>
                     <div for="slide " class="slide-box ">
                         <figure class="slide-figure ">
-                            <img src="{{asset("img/Marie.png")}}" alt="Marie-picture " class="img-slide ">
+                            <img src="{{asset("img/pimg/slide_img1.jpeg")}}" alt="Marie-picture " class="img-slide ">
                         </figure>
                         <span class="box-depoiment ">
-										<p class="depoiment-text ">Vivre loin de sa famille n’est pas facile en tant qu’homme et j’ai le devoir de subvenir aux besoins de ma famille. Avec QuickCash je ne me fais plus de soucis car envoyer de l’argent à ma famille n’a jamais été aussi facile et surtout les frais de transactions sont très abordables.</p>
+										<p class="depoiment-text ">Vivre loin de sa famille n’est pas facile en tant qu’homme et j’ai le devoir de subvenir aux besoins de ma famille. Avec Timbuctu Exchange je ne me fais plus de soucis car envoyer de l’argent à ma famille n’a jamais été aussi facile et surtout les frais de transactions sont très abordables.</p>
 										<h3 class="depoiment-title ">MARIE</h3>
 									</span>
                     </div>
@@ -393,7 +391,7 @@
                             <img src="{{ asset("img/Eliane.jpg") }}" alt="" class="img-slide ">
                         </figure>
                         <span class="box-depoiment ">
-										<p class="depoiment-text ">C’est mon amie qui m’a parlé de QuickCash qu’elle utilisait pour envoyer de l’argent à ses parents, alors j’ai moi aussi décidé de tester et depuis je n’utilise plus d’autre service d’envoi d’argent surtout pour la proximité des points d’envoi.</p>
+										<p class="depoiment-text ">C’est mon amie qui m’a parlé de Timbuctu Exchange qu’elle utilisait pour envoyer de l’argent à ses parents, alors j’ai moi aussi décidé de tester et depuis je n’utilise plus d’autre service d’envoi d’argent surtout pour la proximité des points d’envoi.</p>
 										<h3 class="depoiment-title "> ELIANE</h3>
 									</span>
                     </div>
@@ -403,7 +401,7 @@
                             <img src="{{ asset("img/Emmanuel%20testimony.jpg") }}" alt=" " class="img-slide ">
                         </figure>
                         <span class="box-depoiment ">
-										<p class="depoiment-text ">Quand je suis arrivé en Côte d’Ivoire j’ai été confronté à un souci, j’avais égaré mon sac avec toutes mes affaires carte de crédit tout. Grâce au réseau de QuickCash j’ai pu recevoir de l’argent depuis la France et heureusement quelque jours après j’ai été contacté par quelqu’un qui avait trouvé mes affaires intacte.</p>
+										<p class="depoiment-text ">Quand je suis arrivé en Côte d’Ivoire j’ai été confronté à un souci, j’avais égaré mon sac avec toutes mes affaires carte de crédit tout. Grâce au réseau de Timbuctu Exchange j’ai pu recevoir de l’argent depuis la France et heureusement quelque jours après j’ai été contacté par quelqu’un qui avait trouvé mes affaires intacte.</p>
 										<h3 class="depoiment-title ">EMMANUEL</h3>
 									</span>
                     </div>
@@ -484,47 +482,20 @@
                     <div class="social-impact">
                         <div class="box-img-social">
                             <figure class="social-figure">
-                                <img class="img-impact" src="{{ asset("img/forum-mondiale.png") }}" alt="">
+                                <a href="https://www.lifatransfer.com">
+                                    <img class="img-impact" src="{{ asset("img/pimg/img.png") }}" alt="">
+                                </a>
                             </figure>
                             <div class="box-txt-social">
-                                <h3 class="title-socialimpact" data-translatable>Quickcash au forum mondial des droits de l’homme au maroc</h3>
+                                <h3 class="title-socialimpact" data-translatable>
+                                    <a href="https://www.lifatransfer.com">Création de LIFA TRANSFER</a>
+                                </h3>
                                 <p class="p-socialimpact" data-translatable>
-                                    Création de LIFA TRANSFER au États Unis, une filiale de
-                                    Timbuctu Exchange. LIFA TRANSFER est une plateforme de transfert digital entièrement
-                                    Mettre une image d’illustration et ce lien : https://www.lifatransfer.com
+                                    <a href="https://www.lifatransfer.com">
+                                        Création de LIFA TRANSFER au États Unis, une filiale de
+                                        Timbuctu Exchange. LIFA TRANSFER est une plateforme de transfert digital entièrement
+                                    </a>
                                 </p>
-                                <!-- <span class="showmore-news" id="box-news-span">
-                                    &lt;Show more News&gt;
-                                </span> -->
-                            </div>
-                        </div>
-                        <div class="box-img-social reverse">
-                            <figure class="social-figure">
-                                <img class="img-impact" src="{{ asset("img/Atelier%20secteur%20agricole.png") }}" alt="">
-                            </figure>
-                            <div class="box-txt-social">
-                                <h3 class="title-socialimpact" data-translatable>Le secteur agricole face aux enjeux du changement climatique</h3>
-                                <p class="p-socialimpact" data-translatable>Le 21 Novembre 2014, à l’initiative de la CGECI (Confédération Générale des Entreprises de Côte d’Ivoire) et l’UNEMAF (L’Union des Entreprises Agricoles et Forestières) s’est tenue à la Maison de l’Entreprise, sise
-                                    au plateau, un atelier d’information et de sensibilisation des acteurs du secteur agricole. Les thèmes abordés étaient relatifs à l’impact des changements climatiques sur l’agriculture et les stratégies d’adaptation
-                                    et d’atténuation de leurs effets. La présence de QUICKCASH à cet atelier se justifiait par le fait que la majorité de sa clientèle est constituée d’agriculteurs. Nous avons donc tenu à mettre l’information à la
-                                    disposition de nos clients.</p>
-                                <!-- <span class="showmore-news" id="box-news-span1">
-                                    &lt;Show more News&gt;
-                                </span> -->
-                            </div>
-                        </div>
-                        <div class="box-img-social">
-                            <figure class="social-figure">
-                                <img class="img-impact" src="{{ asset("img/Forum_RSE_Lille.jpg") }}" alt="">
-                            </figure>
-                            <div class="box-txt-social">
-                                <h3 class="title-socialimpact">QuickCash au forum de Lille sur la RSE</h3>
-                                <p class="p-socialimpact">La 8e édition du Forum Internationale de Lille, s’est ouverte du 21 au 24 Octobre 2014 devant un public de plus de 6.000 participants autour de 9 défis majeurs : Les ressources de la science et des technologies, de
-                                    l’emploi, des inégalités, de l’éducation, de la démographie, la finance, de l’information et des territoires. Les cérémonies d’ouverture et de clôture a vu la participation des précurseurs du social business que
-                                    sont le Pr YUNUS MUHAMMAD Prix Nobel de la Paix et TONY MELOTO.</p>
-                                <!-- <span class="showmore-news" id="box-news-span2">
-                                &lt;Show more News&gt;
-                            </span> -->
                             </div>
                         </div>
                     </div>
@@ -537,27 +508,11 @@
             <div class="box-part">
                 <h2 class="title-partners">Partenaire stratégique</h2>
                 <div class="list-part">
-                    <img src="{{ asset("img/Logo_APG.png") }}" class="logo-apg" alt="">
-                    <img src="{{ asset("img/logo_ASUSU_SA.png") }}" class="img-part" alt="">
-                    <img src="{{ asset("img/Logo_BPEC_(banque%20populaire).jpg") }}" class="logo-bpec" alt="">
-                    <img src="{{ asset("img/Logo_Bank_of_africa_logo.png") }}" class="img-part" alt="">
-                    <img src="{{ asset("img/Logo_KATARI_SARL.jpeg") }}" class="img-part" alt="">
-                    <img src="{{ asset("img/Logo_Sonapost_Burkina_Faso.png") }}" class="img-part" alt="">
+                    <img src="{{ asset("img/pimg/bim_s.a.2x_3.png") }}" class="logo-apg" alt="">
+                    <img src="{{ asset("img/pimg/BDM_SA_logo.png") }}" class="img-part" alt="">
+                    <img src="{{ asset("img/pimg/nafa.jpg") }}" class="logo-bpec" alt="">
+                    <img src="{{ asset("img/pimg/transfast.png") }}" class="img-part" alt="">
                     <img src="{{ asset("img/Logo_shakaexpress.png") }}" class="img-part" alt="">
-                    <img src="{{ asset("img/Logo_CNCE.jpg") }}" class="img-part" alt="">
-                    <img src="{{ asset("img/logo_TIMBUKTU_XECHANGE.png") }}" class="img-part" alt="">
-                    <img src="{{ asset("img/logo_TRANSFAST.png") }}" class="logo-part" alt="">
-                    <img src="{{ asset("img/logo_WORLREMIT.png") }}" class="logo-part" alt="">
-                </div>
-            </div>
-            <div class="box-part">
-                <h2 class="title-partners">Partenaires institutionnels</h2>
-                <div class="list-part">
-                    <img src="{{ asset("img/Logo_stanford-university.png") }}" class="img-part" alt="">
-                    <img src="{{ asset("img/19.png") }}" class="img-part img-banque" alt="Banque populaire">
-                    <img src="{{ asset("img/Logo_CGECI.png") }}" class="img-part" alt="">
-                    <img src="{{ asset("img/Logo_Exxonmobil.png") }}" class="img-part" alt="">
-                    <img src="{{ asset("img/Logo_Plan.jpg") }}" class="img-part" alt="">
                 </div>
             </div>
         </div>
@@ -568,7 +523,19 @@
         <div class="wrapper-footer">
             <div id="Contacts" class="box-grand-circle">
                 <div class="grand-circle">
-                    <img class="img-grand-circle" src="{{ asset("img/detalhe_footer_grande.svg") }}" alt="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="474.196" height="472.419" viewBox="0 0 474.196 472.419">
+                        <g id="detalhe_footer_grande" transform="translate(-1770.804 -5448.162)">
+                            <path id="Caminho_235" data-name="Caminho 235" d="M259.289,601.741a85.248,85.248,0,1,0,85.248,85.248A85.246,85.246,0,0,0,259.289,601.741Z" transform="translate(1900.464 5148.345)" fill="#ffa50099"/>
+                            <path id="Caminho_236" data-name="Caminho 236" d="M208.941,740.3a67.488,67.488,0,1,0-67.488-67.488A67.491,67.491,0,0,0,208.941,740.3Z" transform="translate(1771.434 5162.523)" fill="#ffa50099"/>
+                            <path id="Caminho_237" data-name="Caminho 237" d="M162.532,708.359A49.728,49.728,0,1,0,112.8,658.631,49.726,49.726,0,0,0,162.532,708.359Z" transform="translate(1658 5176.702)" fill="#ffa50099"/>
+                            <path id="Caminho_238" data-name="Caminho 238" d="M245.11,705.924a67.49,67.49,0,1,0-67.488-67.488A67.491,67.491,0,0,0,245.11,705.924Z" transform="translate(1914.643 5026.402)" fill="#ffa50099"/>
+                            <circle id="Elipse_28" data-name="Elipse 28" cx="53.281" cy="53.281" r="53.281" transform="translate(1923.451 5615.468) rotate(-4.065)" fill="#ffa50099"/>
+                            <circle id="Elipse_29" data-name="Elipse 29" cx="35.52" cy="35.52" r="35.52" transform="translate(1779.782 5635.465) rotate(-9.217)" fill="#ffa50099"/>
+                            <circle id="Elipse_30" data-name="Elipse 30" cx="49.729" cy="49.729" r="49.729" transform="translate(2111.799 5448.162)" fill="#ffa50099"/>
+                            <path id="Caminho_239" data-name="Caminho 239" d="M183.418,614.771A35.522,35.522,0,1,0,147.9,579.246,35.524,35.524,0,0,0,183.418,614.771Z" transform="translate(1796.956 4918.642)" fill="#ffa50099"/>
+                            <path id="Caminho_240" data-name="Caminho 240" d="M144.1,598.8a26.64,26.64,0,1,0-26.642-26.642A26.641,26.641,0,0,0,144.1,598.8Z" transform="translate(1676.431 4925.734)" fill="#ffa50099"/>
+                        </g>
+                    </svg>
                 </div>
             </div>
             <div class="container-footer">
@@ -576,34 +543,34 @@
                     <div class="box-footer">
                         <div class="text-footer">
                             <figure>
-                                <img src="{{ asset("img/new%20logo%20-%20QC%20Branca.svg") }}" class="img-logo-footer" a href="../css/style.css"></a>
+                                <img style="width: 100px;" src="{{ asset("img/pimg/logo.png") }}" class="img-logo-footer" a href="../css/style.css"></a>
                             </figure>
                             <ul class="list-contact">
                                 <li class="contact-item">
                                     <img src="{{ asset("img/baseline-location_on-24px.svg") }}" class="info-footer-img" alt="">
-                                    <p class="p-info-footer">Star 14, Angre 9e Tranche, Abidjan, Côte D’Ivoire</p>
+                                    <p class="p-info-footer">Niarela, Hamdallaye ACI 2000</p>
                                 </li>
                                 <li class="contact-item">
                                     <img src="{{ asset("img/baseline-phone-24px%20(1).svg") }}" class="info-footer-img" alt="">
-                                    <p class="p-info-footer">Tel : (+225) 22 50 45 72 </p>
+                                    <p class="p-info-footer">Tel : (+225) 07 77 08 47 08 </p>
                                 </li>
                                 <li class="contact-item">
                                     <img src="{{ asset("img/baseline-email-24px.svg") }}" class="info-footer-img" alt="">
-                                    <p class="p-info-footer">Email : infos@quickcashci.com</p>
+                                    <p class="p-info-footer">Email : contact@timbuktu-exchange.com</p>
                                 </li>
                             </ul>
                         </div>
                         <div class="box-copyright-desktop">
-                            <p class="copyright">Copyright © 2019 QuickCash - All Rights Reserved </p>
+                            <p class="copyright">Copyright © 2019 Timbuctu Exchange - All Rights Reserved </p>
                         </div>
                     </div>
                 </div>
                 <nav class="menu-secundario">
                     <ul class="list-menu-secundario">
-                        <a href="../pages/about-fr.html">
+                        <a href="">
                             <li class="item-menu-footer">Qui Sommes-Nous ?</li>
                         </a>
-                        <a href="../pages/products-fr.html">
+                        <a href="">
                             <li class="item-menu-footer">Nos Produits</li>
                         </a>
                         <a href="#news" class="menu-footer-news">
@@ -613,10 +580,10 @@
                             <li class="item-menu-footer">Contact</li>
                         </a>
                     </ul>
-                    <img class="img-circle-whith" src="assets/img/detalhe_footer_pequeno.svg" alt="">
+                    <img class="img-circle-whith" src="img/detalhe_footer_pequeno.svg" alt="">
                 </nav>
                 <div class="box-copyright-mobile">
-                    <p class="copyright">Copyright © 2019 QuickCash - All Rights Reserved </p>
+                    <p class="copyright tex-wite">Copyright © 2019 Timbuctu Exchange - All Rights Reserved </p>
                 </div>
             </div>
         </div>

@@ -2,7 +2,7 @@
     height: 100%;
     display: flex;
     justify-content: center;
-    background-color: rgba(0, 131, 202, 1);
+    background-color: #F39D24;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -106,7 +106,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: #1a82ca;
+    background-color: #F39D24;
 }
 
 @media(max-width: 768px) {
@@ -202,7 +202,7 @@
     align-items: center;
     flex-direction: column;
     font-family: 'Open Sans', sans-serif;
-    background: linear-gradient(to bottom, rgba(0, 131, 202, 1) 0%, rgba(0, 131, 202, 1) 100%, rgba(0, 89, 202, 1) 12%);
+    background: linear-gradient(to bottom, #f39d24 0%, #f39d2499 100%, #f39d240f 12%);
 }
 
 .wrapper-values {
